@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto sm:w-[560px] w-[375px] bg-white p-3 rounded shadow">
+  <div class="container mx-auto sm:w-[560px] w-full bg-white p-3 rounded shadow">
     <header>
         <TopNav />
     </header>
