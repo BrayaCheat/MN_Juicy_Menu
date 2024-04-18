@@ -1,5 +1,7 @@
 <template>
-  <section id="detail">
+  <section id="detail"
+  class="dark:text-black"
+  >
     <div v-if="juice" class="mt-10 p-2 border rounded-md shadow">
       <img
         :src="getImage(juice.image)"
