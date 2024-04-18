@@ -1,6 +1,6 @@
 <template>
   <section id="card">
-    <div v-if="juice" class="border p-2 rounded-md shadow-sm">
+    <div v-if="juice" class="border p-2 rounded-md shadow-sm duration-300 hover:border-blue-600">
       <img
         :src="getImage(juice.image)"
         class="sm:h-[300px] h-[200px] object-cover w-full rounded shadow-md"

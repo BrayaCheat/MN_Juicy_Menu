@@ -36,7 +36,7 @@
       <UInput
         icon="i-heroicons-magnifying-glass"
         placeholder="ស្វែងរកទឹកផ្លែឈើ..."
-        color="gray"
+        color="blue"
         variant="outline"
         trailing
         v-model="searchBody"
