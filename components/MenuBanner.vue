@@ -8,7 +8,7 @@
       :style="{
         backgroundImage: `url(${banner.photo})`,
         backgroundPosition: 'center',
-        backgroundSize: 'contain',
+        backgroundSize: 'cover',
       }"
     >
       <div
@@ -25,7 +25,7 @@
 const BannerData = ref([
   {
     name: "ភេសជ្ជៈពេញនិយម",
-    photo: "/photos/glowingskin.jpg",
+    photo: "/photos/popular.jpg",
     path: 'Star'
   },
   {
