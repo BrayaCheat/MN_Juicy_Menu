@@ -1,5 +1,5 @@
 <template>
-  <section id="juice-page" class="mt-10 grid gap-3 place-items-stretch">
+  <section id="juice-page" class="mt-10 grid gap-3 place-items-stretch dark:text-black">
     <div class="flex items-center gap-3">
       <UButton icon="i-heroicons-arrow-uturn-left" to="/" color="blue" />
       <h1 class="text-2xl font-bold">{{ query }}</h1>

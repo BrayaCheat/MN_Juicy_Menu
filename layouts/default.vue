@@ -9,20 +9,14 @@
     </main>
     
     <footer>
-        <UHorizontalNavigation
-        class="mt-10 border"
-        :links="links"
+        <UButton
+        label="Developed by BRAYA CHEAT"
+        class="mt-10 dark:text-black border w-full"
+        color="gray"
+        variant="none"
+        to="https://web.facebook.com/braya.cheat"
         />
     </footer>
   </div>
 </template>
 
-<script setup>
-    const links = [
-        [
-            {
-                label: 'Developed by BRAYA CHEAT'
-            }
-        ]
-    ]
-</script>

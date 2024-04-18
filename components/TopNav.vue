@@ -1,5 +1,6 @@
 <template>
   <section id="header"
+  class="dark:text-black"
   >
     <UButton
       label="MN-Juicy Menu"
@@ -36,10 +37,11 @@
       <UInput
         icon="i-heroicons-magnifying-glass"
         placeholder="ស្វែងរកទឹកផ្លែឈើ..."
-        color="white"
-        variant="outline"
+        color="gray"
+        variant="none"
         trailing
         v-model="searchBody"
+        class="dark:text-black border rounded-md shadow-sm"
       />
       <h1 v-if="isError" class="text-red-600 text-sm mt-3">{{ isError }}</h1>
     </form>

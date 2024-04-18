@@ -1,5 +1,5 @@
 <template>
-  <section id="search">
+  <section id="search" class="dark:text-black">
     <div class="flex items-center gap-3 mt-10">
       <UButton icon="i-heroicons-arrow-uturn-left" to="/" color="blue" />
       <h1 class="text-2xl font-bold">Search Result</h1>
