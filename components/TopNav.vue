@@ -6,7 +6,7 @@
       label="MN-Juicy Menu"
       color="blue"
       variant="none"
-      class="text-2xl ps-0"
+      class="text-2xl ps-0 font-medium"
       to="/"
     />
     <div class="flex flex-wrap items-center justify-start gap-3 mt-3">
@@ -14,15 +14,17 @@
         label="Fairplus Market. Phnom Penh"
         icon="i-heroicons-map-pin"
         color="blue"
-        variant="none"
+        trailing
+        variant="link"
         class="font-normal ps-0"
         to="https://www.google.com/maps/dir/11.5434687,104.8939592/FairPlus+Supercenter+Steung+Mean+Chey,+Samdech+Monireth+Blvd+(217),+Phnom+Penh/@11.5434968,104.8913213,17z/data=!3m1!4b1!4m18!1m8!3m7!1s0x310951fd15cf0e79:0x642f021e01925ce3!2sFairPlus+Supercenter+Steung+Mean+Chey!8m2!3d11.5434187!4d104.8939575!15sCghmYWlycGx1c1oKIghmYWlycGx1c5IBC3N1cGVybWFya2V04AEA!16s%2Fg%2F11frrzky7d!4m8!1m1!4e1!1m5!1m1!1s0x310951fd15cf0e79:0x642f021e01925ce3!2m2!1d104.8939575!2d11.5434187?entry=ttu"
       />
       <UButton
         :label="phoneNumber"
+        trailing
         icon="i-heroicons-phone"
         color="blue"
-        variant="none"
+        variant="link"
         class="font-normal ps-0"
         :to="`tel:${phoneNumber}`"
       />

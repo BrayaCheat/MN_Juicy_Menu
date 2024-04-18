@@ -10,9 +10,17 @@
       <h1 class="font-bold mt-3 h-[48px] sm:h-full">{{ juice.name }}</h1>
       <p class="h-[48px]">{{ juice.description }}</p>
       <div class="flex items-center justify-between mt-1">
-        <h1 class="text-blue-600 text-2xl font-medium">6000r</h1>
-        <!-- <UButton icon="i-heroicons-plus" class="rounded-full" color="blue" /> -->
+        <h1 class="text-blue-600 text-xl font-medium">6000r</h1>
+        <UButton
+           icon="i-heroicons-eye" 
+           class="rounded-full" 
+           color="blue" 
+           :to="`/juice/${juice._id}`"
+           />
       </div>
+    </div>
+    <div v-else>
+      <skeleton />
     </div>
   </section>
 </template>
