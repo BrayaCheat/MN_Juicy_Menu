@@ -1,7 +1,7 @@
 <template>
   <section id="banner">
     <NuxtLink
-      :to="`/juice?query=${banner.path}`"
+      :to="`/juice?query=${banner.path}&title=${banner.name}`"
       class="grid place-items-center mt-10 h-[220px] relative rounded-md shadow-md"
       v-for="(banner, index) in BannerData"
       :key="index"

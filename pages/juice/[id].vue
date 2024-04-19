@@ -1,8 +1,8 @@
 <template>
   <section id="detail"
-  class="dark:text-black"
+  class="dark:text-black pt-3"
   >
-    <div v-if="juice" class="mt-10 p-2 border rounded-md shadow">
+    <div v-if="juice" class=" p-2 border rounded-md shadow">
       <img
         :src="getImage(juice.image)"
         class="object-cover rounded-md shadow h-[540px] w-full"
@@ -11,11 +11,11 @@
       <p>{{ juice.description }}</p>
 
       <div class="flex items-center justify-between mt-1">
-        <h1 class="text-blue-600 text-xl font-medium">6000r</h1>
+        <h1 class="text-green-500 text-xl font-medium">6000r</h1>
         <UButton
           icon="i-heroicons-arrow-uturn-left"
-          class="rounded-full"
-          color="blue"
+          class="rounded-full dark:text-white"
+          color="primary"
           to="/"
         />
       </div>

@@ -1,11 +1,7 @@
 <template>
   <div
-    class="container mx-auto sm:w-[560px] w-full bg-white p-3 rounded shadow"
+    class="container mx-auto sm:w-[560px] w-full bg-white px-3 pb-3 shadow"
   >
-    <header>
-      <TopNav />
-    </header>
-
     <main>
       <slot />
     </main>

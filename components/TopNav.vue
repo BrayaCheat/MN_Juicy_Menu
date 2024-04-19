@@ -1,21 +1,19 @@
 <template>
   <section id="header" class="dark:text-black">
-    <UButton
-      label="Menu - MN JUICY"
-      color="blue"
-      variant="none"
-      class="text-2xl font-medium bg-blue-600 w-full dark:text-white"
-      to="/"
-    />
-    <div class="grid mt-3 border">
-      <UVerticalNavigation :links="map" />
+    <div class="flex items-center justify-center w-full bg-gray-100 p-3">
+      <img src="/photos/MN_Juicy_Logo.png" class="object-cover w-[80px] h-[80px] bg-green-500 rounded-full">
+    </div>
+    <div class="grid mt-3 border rounded-md shadow-sm">
+      <UVerticalNavigation :links="map"/>
       <UVerticalNavigation :links="phone" />
     </div>
 
-    <article class="text-md mt-3">
+    <!-- <article class="text-md mt-3">
       យកឈ្នះបញ្ហាស្បែកនិងសម្រស់ពីការទទួលទានទឹកបន្លែផ្លែឈើដែលទទួលបានអត្ថប្រយោជន៍ដ៏មិនគួរឲ្យជឿ
       និង សម្រស់ស្អាតចែករំលែកដោយ MN Juicy.
-    </article>
+    </article> -->
+
+    <UDivider class="mt-10"/>
 
     <form @submit.prevent="handleSearch" class="mt-10">
       <UInput
