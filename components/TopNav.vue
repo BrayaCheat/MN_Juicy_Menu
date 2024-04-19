@@ -6,7 +6,7 @@
         class="object-cover w-[80px] h-[80px] bg-green-500 rounded-full"
       />
     </div>
-    
+
     <!-- <article class="text-md mt-3">
       យកឈ្នះបញ្ហាស្បែកនិងសម្រស់ពីការទទួលទានទឹកបន្លែផ្លែឈើដែលទទួលបានអត្ថប្រយោជន៍ដ៏មិនគួរឲ្យជឿ
       និង សម្រស់ស្អាតចែករំលែកដោយ MN Juicy.
@@ -22,30 +22,33 @@
         v-model="searchBody"
         class="dark:text-black border rounded-md shadow-sm w-full"
       />
-
+      <div
+        v-if="searchBody.length"
+        class="border p-2 rounded-md shadow-sm mt-3"
+      >
+        <div
+          v-for="(name, index) in matchingName.slice(0, 5)"
+          :key="index"
+          class="my-3"
+        >
+          <UButton
+            :label="name.name"
+            :to="`/juice/${name._id}`"
+            class="dark:text-black dark:bg-gray-100 w-full dark:hover:text-white duration-300"
+          />
+        </div>
+      </div>
       <h1 v-if="isError" class="text-red-600 text-sm mt-3">{{ isError }}</h1>
     </form>
   </section>
 </template>
 
 <script setup>
+import axios from "axios";
+
 const searchBody = ref("");
 const isError = ref();
-
-const map = [
-  {
-    label: "ផ្សារទំនើប Fair Plus (ស្ទឹងមានជ័យ)",
-    avatar: {
-      src: "https://static-00.iconduck.com/assets.00/google-maps-old-icon-512x512-5baetapg.png",
-    },
-    badge: "Google Map",
-    to: "https://www.google.com/maps/dir/11.5434687,104.8939592/FairPlus+Supercenter+Steung+Mean+Chey,+Samdech+Monireth+Blvd+(217),+Phnom+Penh/@11.5434968,104.8913213,17z/data=!3m1!4b1!4m18!1m8!3m7!1s0x310951fd15cf0e79:0x642f021e01925ce3!2sFairPlus+Supercenter+Steung+Mean+Chey!8m2!3d11.5434187!4d104.8939575!15sCghmYWlycGx1c1oKIghmYWlycGx1c5IBC3N1cGVybWFya2V04AEA!16s%2Fg%2F11frrzky7d!4m8!1m1!4e1!1m5!1m1!1s0x310951fd15cf0e79:0x642f021e01925ce3!2m2!1d104.8939575!2d11.5434187?entry=ttu",
-  },
-];
-
-const phone = [
-  
-];
+const searchData = ref([]);
 
 const handleSearch = async () => {
   if (searchBody.value) {
@@ -57,6 +60,25 @@ const handleSearch = async () => {
     isError.value = `សូមវាយបញ្ចូលឈ្មោះរបស់ទឹកផ្លែឈើ!`;
   }
 };
+
+const getSearch = async () => {
+  await axios
+    .get(`https://mn-juicy-api.onrender.com/api/product`)
+    .then((res) => {
+      searchData.value = res.data.list;
+    })
+    .catch((err) => console.log(err));
+};
+
+const matchingName = computed(() => {
+  return searchData.value.filter((n) =>
+    n.name.toLowerCase().includes(searchBody.value.toLowerCase())
+  );
+});
+
+onMounted(() => {
+  getSearch();
+});
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="google-map" class="w-full mt-10">
+  <section id="google-map" class="w-full mt-10 border rounded-md shadow-sm">
     <UHorizontalNavigation :links="links"/>
     <div
       style="
