@@ -1,7 +1,5 @@
 <template>
-  <section id="header"
-  class="dark:text-black"
-  >
+  <section id="header" class="dark:text-black">
     <UButton
       label="MN-Juicy Menu"
       color="blue"
@@ -43,8 +41,9 @@
         variant="none"
         trailing
         v-model="searchBody"
-        class="dark:text-black border rounded-md shadow-sm"
+        class="dark:text-black border rounded-md shadow-sm w-full"
       />
+
       <h1 v-if="isError" class="text-red-600 text-sm mt-3">{{ isError }}</h1>
     </form>
   </section>
@@ -53,7 +52,7 @@
 <script setup>
 const searchBody = ref("");
 const isError = ref();
-const phoneNumber = ref('+855 16 810 300')
+const phoneNumber = ref("+855 16 810 300");
 
 const handleSearch = async () => {
   if (searchBody.value) {

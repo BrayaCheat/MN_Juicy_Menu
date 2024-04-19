@@ -11,8 +11,10 @@
       </div>
     </div>
 
-    <div v-else>
-        <skeleton/>
+    <div v-else
+    class="mt-10 text-2xl font-bold ms-11"
+    >
+        <h1>{{ isNotFound }}</h1>
     </div>
   </section>
 </template>
@@ -22,11 +24,16 @@ import axios from "axios";
 
 const { search_query } = useRoute().query;
 const juiceData = ref([]);
+const isNotFound = ref()
 
 const fetchJucie = async () => {
   await axios
     .get(`https://mn-juicy-api.onrender.com/api/search?q=${search_query}`)
-    .then((res) => (juiceData.value = res.data.list))
+    .then((res) => {
+      console.log(res.data)
+      juiceData.value = res.data.list
+      isNotFound.value = res.data.message
+    })
     .catch((err) => console.log(err));
 };
 
