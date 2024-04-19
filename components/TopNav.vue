@@ -1,19 +1,16 @@
 <template>
   <section id="header" class="dark:text-black">
     <div class="flex items-center justify-center w-full bg-gray-100 p-3">
-      <img src="/photos/MN_Juicy_Logo.png" class="object-cover w-[80px] h-[80px] bg-green-500 rounded-full">
+      <img
+        src="/photos/MN_Juicy_Logo.png"
+        class="object-cover w-[80px] h-[80px] bg-green-500 rounded-full"
+      />
     </div>
-    <div class="grid mt-3 border rounded-md shadow-sm">
-      <UVerticalNavigation :links="map"/>
-      <UVerticalNavigation :links="phone" />
-    </div>
-
+    
     <!-- <article class="text-md mt-3">
       យកឈ្នះបញ្ហាស្បែកនិងសម្រស់ពីការទទួលទានទឹកបន្លែផ្លែឈើដែលទទួលបានអត្ថប្រយោជន៍ដ៏មិនគួរឲ្យជឿ
       និង សម្រស់ស្អាតចែករំលែកដោយ MN Juicy.
     </article> -->
-
-    <UDivider class="mt-10"/>
 
     <form @submit.prevent="handleSearch" class="mt-10">
       <UInput
@@ -47,22 +44,7 @@ const map = [
 ];
 
 const phone = [
-  {
-    label: "Malis Kheang",
-    to: "tel:016810300",
-    avatar: {
-      src: "/photos/malis.jpg",
-    },
-    badge: "+855 16 810 300",
-  },
-  {
-    label: "Phon Sreyni",
-    to: "tel:096 979 6159",
-    avatar: {
-      src: "/photos/nik.jpg",
-    },
-    badge: "+855 96 979 6159",
-  },
+  
 ];
 
 const handleSearch = async () => {
@@ -76,3 +58,12 @@ const handleSearch = async () => {
   }
 };
 </script>
+
+<style>
+#my-map-canvas img {
+  max-width: none !important;
+  background: none !important;
+  font-size: inherit;
+  font-weight: inherit;
+}
+</style>

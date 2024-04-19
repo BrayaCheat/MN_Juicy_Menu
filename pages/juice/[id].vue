@@ -16,7 +16,7 @@
           icon="i-heroicons-arrow-uturn-left"
           class="rounded-full dark:text-white"
           color="primary"
-          to="/"
+          @click="goBack"
         />
       </div>
     </div>
@@ -44,6 +44,10 @@ const getImage = (photo) => {
   return `https://mn-juicy-api.onrender.com/` + photo;
 };
 
+const goBack = () => {
+  useRouter().go(-1)
+}
+ 
 onMounted(() => {
   getDetailJuice();
 });
