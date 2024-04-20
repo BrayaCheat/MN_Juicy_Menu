@@ -11,7 +11,7 @@
       <p>{{ juice.description }}</p>
 
       <div class="flex items-center justify-between mt-1">
-        <h1 class="text-green-500 text-xl font-medium">6000r</h1>
+        <h1 class="text-green-500 text-xl font-medium">6000 រៀល</h1>
         <UButton
           icon="i-heroicons-arrow-uturn-left"
           class="rounded-full dark:text-white"

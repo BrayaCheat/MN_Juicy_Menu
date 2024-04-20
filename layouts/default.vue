@@ -4,7 +4,7 @@
       <slot />
     </main>
 
-    <footer class="mt-10 mb-28 border p-2 rounded-md shadow-sm">
+    <footer class="mt-10 mb-20 border p-2 rounded-md shadow-sm">
       <UVerticalNavigation :links="links" />
     </footer>
   </div>

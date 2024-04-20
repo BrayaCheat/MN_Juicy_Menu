@@ -10,7 +10,7 @@
       <h1 class="font-bold mt-3 h-[48px] sm:h-full">{{ juice.name }}</h1>
       <p class="h-[48px]">{{ juice.description }}</p>
       <div class="flex items-center justify-between mt-1">
-        <h1 class="text-green-500 text-xl font-medium">6000r</h1>
+        <h1 class="text-green-500 text-xl font-medium">6000 រៀល</h1>
         <UButton
            icon="i-heroicons-eye" 
            class="rounded-full dark:text-white" 
